@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti 💚</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(135deg,#081c15,#1b4332,#2d6a4f);
+    color:white;
+}
+
+.section{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    transition:0.6s;
+}
+
+.hidden{
+    transform:translateX(100%);
+    opacity:0;
+}
+
+/* 💿 Casete */
+.cassette{
+    width:420px;
+    height:230px;
+    background:linear-gradient(145deg,#52b788,#2d6a4f);
+    border-radius:25px;
+    position:relative;
+    box-shadow:0 25px 60px rgba(0,0,0,0.5);
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.cassette:hover{
+    transform:scale(1.05);
+}
+
+.label{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    height:55px;
+    background:white;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#2d6a4f;
+    font-weight:bold;
+}
+
+.window{
+    position:absolute;
+    top:100px;
+    left:50%;
+    transform:translateX(-50%);
+    width:70%;
+    height:55px;
+    background:#1b4332;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.reel{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#081c15;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:spin 4s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+/* 💌 Carta */
+.card{
+    max-width:700px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#52b788;
+    color:white;
+    cursor:pointer;
+}
+
+/* 🎧 Canciones */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.song{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.song:hover{
+    background:rgba(255,255,255,0.2);
+    transform:translateY(-5px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- 💿 CASSETTE -->
+<div class="section" id="cassette">
+    <h2>Presiona el casete 💚</h2>
+    <div class="cassette" onclick="showLetter()">
+        <div class="label">16 Songs For You 💚</div>
+        <div class="window">
+            <div class="reel">♪</div>
+            <div class="reel">♪</div>
+        </div>
+    </div>
+</div>
+
+<!-- 💌 CARTA -->
+<div class="section hidden" id="letter">
+    <div class="card">
+        <h2>Un San Valentín un poquito atrasado 💚</h2>
+
+        <p>
+        Puede que las canciones estén un poco en desorden jaja,
+        pero las elegí pensando en ti.
+        Son 16 canciones por los 16 días que pasaron después de febrero.
+        Tenían que ser 14 por San Valentín… pero no pude ah.
+        </p>
+
+        <p>
+        Igual quería desearte feliz San Valentín atrasado 💚
+        Me gusta cómo estamos ahora,
+        aunque la distancia sea un problemita…
+        pero se soluciona, ¿verdad?
+        </p>
+
+        <p>
+        Fue raro todo ah…
+        porque tú volviste cuando yo me alejé.
+        Yo dije “ya no va a dar esto” jajjaja,
+        pero me gustó que insistieras.
+        </p>
+
+        <p>
+        Quiero ser tu compañía hasta donde Dios nos permita.
+        Apoyarte, quererte, cuidarte y estar para ti.
+        Te quiero mucho, muchísimo 💚
+        </p>
+
+        <p>
+        Y ahora sí…
+        mis canciones dedicadas a ti 🎧💚
+        </p>
+
+        <button onclick="showSongs()">Ver canciones 💚</button>
+    </div>
+</div>
+
+<!-- 🎧 CANCIONES -->
+<div class="section hidden" id="songs">
+    <h2>16 canciones para ti 💚</h2>
+
+    <div class="grid">
+        <div class="song" onclick="window.open('https://youtu.be/_bXTbfnWPqk?si=1QBYLxK8TXCrWr0S')">Canción 1</div>
+        <div class="song" onclick="window.open('https://youtu.be/L47mRyhxsBw?si=1yoc80MtnvxPoDCA')">Canción 2</div>
+        <div class="song" onclick="window.open('https://youtu.be/D9W4DLjmoOM?si=79_oWhv_eoj7b_mk')">Canción 3</div>
+        <div class="song" onclick="window.open('https://youtu.be/BtZlp9V7Woc?si=bavb-jmJTxqcJ-aJ')">Canción 4</div>
+        <div class="song" onclick="window.open('https://youtu.be/z5svoighsdk?si=ogvyIHwlkxVGp135')">Canción 5</div>
+        <div class="song" onclick="window.open('https://youtu.be/kdeXZK5jrqw?si=oL5SYocBG7PcNeDx')">Canción 6</div>
+        <div class="song" onclick="window.open('https://youtu.be/apFqJ49VstY?si=R4m3Qdu4gWdwAVGh')">Canción 7</div>
+        <div class="song" onclick="window.open('https://youtu.be/V1L5dItIseg?si=5fD8fuazNophRsvT')">Canción 8</div>
+        <div class="song" onclick="window.open('https://youtu.be/9qO95PaCEaM?si=DUuovYYp7en8-c8b')">Canción 9</div>
+        <div class="song" onclick="window.open('https://youtu.be/otP2HT5m9GI?si=p9LfOPR8RgxSJhfQ')">Canción 10</div>
+        <div class="song" onclick="window.open('https://youtu.be/HAt3u73ND70?si=ksWkrVO2AG-5_0Qw')">Canción 11</div>
+        <div class="song" onclick="window.open('https://youtu.be/HHjCYxp07aY?si=7PrBgFhFN2WL0x7Q')">Canción 12</div>
+        <div class="song" onclick="window.open('https://youtube.com/watch?v=Mcj75l2gJcY&si=nrLmfVl_987YICD7')">Canción 13</div>
+        <div class="song" onclick="window.open('https://youtu.be/6W4L2O-JQ-w?si=aBgag8pJ4yW6c42b')">Canción 14</div>
+        <div class="song" onclick="window.open('https://youtu.be/7flT6J_1P7Y?si=aNtoJrJSQHdF-DEy')">Canción 15</div>
+        <div class="song" onclick="window.open('https://youtu.be/6thmPrTxBtI?si=trjp9D28O_WqoRgq')">Canción 16</div>
+    </div>
+</div>
+
+<script>
+function showLetter(){
+    document.getElementById("cassette").classList.add("hidden");
+    document.getElementById("letter").classList.remove("hidden");
+}
+
+function showSongs(){
+    document.getElementById("letter").classList.add("hidden");
+    document.getElementById("songs").classList.remove("hidden");
+}
+</script>
+
+</body>
+  </html>
